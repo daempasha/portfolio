@@ -1,8 +1,9 @@
 import Image from "next/image";
 import dayjs from "dayjs";
 import { FaArrowCircleRight, FaArrowRight, FaCode, FaEye } from "react-icons/fa";
-import { iProjectApi } from "../../collections/types";
+import { iProjectApi } from "@collections/types";
 import Link from "next/link";
+import { DATE_FORMAT } from "@collections/constants";
 
 
 type iProjectCard = iProjectApi & {
@@ -36,7 +37,7 @@ const ProjectCard = ({ title, publishedAt, codeUrl, demoUrl, author, imageUrl, s
             <div className="flex justify-between items-center">
                 <h1 className="text-lg">{title}</h1>
                 <span className="text-sm text-gray-500">
-                    {dayjs(publishedAt, "x").format("ddd DD, YYYY")}
+                    {dayjs(publishedAt, "x").format(DATE_FORMAT)}
                 </span>
             </div>
             <div className="flex">

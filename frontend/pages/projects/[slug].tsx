@@ -13,6 +13,7 @@ import Link from "next/link";
 import client from "../../client";
 import { GetStaticPropsContext } from "next";
 import { ReactNode, FC } from "react";
+import { DATE_FORMAT } from "@collections/constants";
 
 function urlFor(source: any) {
     return imageUrlBuilder(client).image(source)
@@ -104,7 +105,7 @@ const Project: FC<iProject> = ({ project }) => {
                         </div>
                         <div className="flex-1">
                             <div className="text-center text-2xl">{title}</div>
-                            <div className="text-center text-gray-500 dark:text-gray-300">{dayjs(project.publishedAt).format("ddd DD, YYYY")}</div>
+                            <div className="text-center text-gray-500 dark:text-gray-300">{dayjs(project.publishedAt).format(DATE_FORMAT)}</div>
                             <div className="my-5 text-center">
                                 <Image className="rounded-md " src={imageUrl} alt={"alt"} width={885} height={461} />
                             </div>
