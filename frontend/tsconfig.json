@@ -18,17 +18,24 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "@collections": [
         "collections/*"
       ],
+      "@pages": [
+        "pages/*"
+      ],
+      "@components": [
+        "components/*"
+      ]
     }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "components/ProjectCard/projectcard.component.sx"
   ],
   "exclude": [
     "node_modules"

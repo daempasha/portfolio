@@ -8,5 +8,6 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-  important: true
+  important: true,
+  darkMode: "class"
 }
