@@ -4,7 +4,7 @@ interface iStickyContainer {
 
 const StickyContainer = ({ children }: iStickyContainer) => {
     return (
-        <div className="sticky top-5 bg-white dark:bg-gray-900 rounded-md p-5">
+        <div className="sticky top-16 bg-white dark:bg-gray-900 rounded-md p-5">
             {children}
         </div>
     )
