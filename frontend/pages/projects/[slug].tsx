@@ -1,16 +1,15 @@
 import Head from "next/head";
 import Footer from "@components/Footer/footer.component";
-import Navbar from "../../components/Navbar/navbar.component";
-import ProjectCard, { ANCHOR_STYLE } from "../../components/ProjectCard/projectcard.component";
+import Navbar from "@components/Navbar/navbar.component";
+import ProjectCard, { ANCHOR_STYLE } from "@components/ProjectCard/projectcard.component";
 import dayjs from "dayjs";
-import StickyContainer from "../../components/StickyContainer/stickycontainer.component";
+import StickyContainer from "@components/StickyContainer/stickycontainer.component";
 import imageUrlBuilder from '@sanity/image-url'
 import { PortableText } from '@portabletext/react'
-import { iProjectApi, iPtComponent, iPtComponents } from '../../collections/types'
+import { iProjectApi, iPtComponent, iPtComponents } from '@collections/types';
 import { FaArrowLeft, FaArrowRight, FaCode, FaRoad } from "react-icons/fa"
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import client from "../../client";
 import { GetStaticPropsContext } from "next";
 import { ReactNode, FC } from "react";

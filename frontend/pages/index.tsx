@@ -3,10 +3,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { FC } from 'react'
 import client from '../client'
-import { iProjectApi } from '../collections/types'
-import Footer from '../components/Footer/footer.component'
-import Navbar from '../components/Navbar/navbar.component'
-import ProjectCard from '../components/ProjectCard/projectcard.component'
+import { iProjectApi } from '@collections/types'
+import Footer from '@components/Footer/footer.component'
+import Navbar from '@components/Navbar/navbar.component'
+import ProjectCard from '@components/ProjectCard/projectcard.component'
 
 
 interface iHome {
