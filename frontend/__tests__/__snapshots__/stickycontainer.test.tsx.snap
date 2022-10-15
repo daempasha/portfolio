@@ -6,7 +6,7 @@ exports[`can see container 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="sticky top-5 bg-white dark:bg-gray-900 rounded-md p-5"
+        class="sticky top-16 bg-white dark:bg-gray-900 rounded-md p-5"
       >
         <p>
           Container test
@@ -16,7 +16,7 @@ exports[`can see container 1`] = `
   </body>,
   "container": <div>
     <div
-      class="sticky top-5 bg-white dark:bg-gray-900 rounded-md p-5"
+      class="sticky top-16 bg-white dark:bg-gray-900 rounded-md p-5"
     >
       <p>
         Container test
