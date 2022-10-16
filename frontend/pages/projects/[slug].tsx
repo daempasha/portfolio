@@ -106,10 +106,10 @@ const Project: FC<iProject> = ({ project }) => {
                         <div className="flex-1">
                             <div className="text-center text-2xl">{title}</div>
                             <div className="text-center text-gray-500 dark:text-gray-300">{dayjs(project.publishedAt).format(DATE_FORMAT)}</div>
-                            <div className="my-5 text-center">
+                            <div className="mx-2 md:mx-0 my-5 text-center">
                                 <Image className="rounded-md " src={imageUrl} alt={"alt"} width={885} height={461} />
                             </div>
-                            <div>
+                            <div className="mx-2 md:mx-0">
 
                                 <PortableText
                                     value={body}
