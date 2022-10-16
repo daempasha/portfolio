@@ -65,10 +65,10 @@ jobs:
             - ~/node_modules
       - run:
           name: Build
-          command: CI= npm run build
+          command: npm run build
       - run:
           name: Deploy to Netlify
-          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=.next
+          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod
 
 workflows:
   version: 2
