@@ -25,7 +25,7 @@ const ProjectCard = ({ title, publishedAt, codeUrl, demoUrl, author, imageUrl, s
                             <FaArrowCircleRight size={36} />
                             Read more
                         </div>
-                        <div className="transition-all absolute  w-full h-full group-hover:visible invisible hover:bg-black hover:opacity-40" />
+                        <div className="transition-all absolute  w-full h-full group-hover:visible invisible group-hover:bg-black group-hover:opacity-40" />
                     </div>
                 </a>
             </Link>
