@@ -30,7 +30,7 @@ const ProjectCard = ({ title, publishedAt, codeUrl, demoUrl, author, imageUrl, s
                 </a>
             </Link>
 
-            <div className="flex justify-between items-center">
+            <div className="flex mt-1 justify-between items-center">
                 <h1 className="text-lg">{title}</h1>
                 <span className="text-sm text-gray-500">
                     {dayjs(publishedAt, "x").format(DATE_FORMAT)}
