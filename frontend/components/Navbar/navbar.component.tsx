@@ -2,7 +2,7 @@ import ThemeSwitcher from "../ThemeSwitcher/themeswitcher.component";
 
 const Navbar = () => {
     return (
-        <nav className="max-w-7xl w-full my-8 mx-auto">
+        <nav className="px-2 md:p-0 max-w-7xl w-full my-8 mx-auto">
             <div
                 className="mx-1 xl:mx-0  flex justify-between">
 

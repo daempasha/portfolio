@@ -24,7 +24,7 @@ const Home: FC<iHome> = ({ projects }: iHome) => {
 
       <div className="flex flex-col bg-gray-100 dark:bg-gray-800 dark:text-gray-200 min-h-screen ">
         <Navbar />
-        <main className="py-10 max-w-7xl w-full mx-auto flex-grow">
+        <main className="px-2 md:px-0 py-10 max-w-7xl w-full mx-auto flex-grow">
           <div className='mx-1 xl:mx-0 underline underline-offset-4 decoration-blue-400 decoration-wavy' >
             PROJECTS
           </div>
