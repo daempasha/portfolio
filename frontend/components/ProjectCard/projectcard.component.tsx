@@ -21,7 +21,7 @@ const ProjectCard = ({ title, publishedAt, codeUrl, demoUrl, author, mainImage, 
             <Link href={`projects/${slug.current}`}>
                 <a className="transition-all group">
                     <div className="relative flex justify-center items-center ">
-                        <Image className="rounded-md" src={mainImage && urlFor(mainImage).url()} placeholder="blur" blurDataURL={mainImage && urlFor(mainImage).blur(20).url()} alt={`${title} Main Image`} width={width} height={height} />
+                        <Image className="rounded-md" src={mainImage && urlFor(mainImage).url()} placeholder="blur" blurDataURL={mainImage && urlFor(mainImage).blur(20).url()} alt={`${title} Main Image`} objectFit="cover" width={width} height={height} />
                         <div className="z-10 text-white absolute group-hover:visible invisible flex flex-col justify-center items-center">
                             <FaArrowCircleRight size={36} />
                             Read more
