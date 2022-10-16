@@ -75,7 +75,7 @@ interface iProject {
 
 const Project: FC<iProject> = ({ project }) => {
 
-    const { title = null, demoUrl = "#", codeUrl = "#", imageUrl = undefined, body = null } = project;
+    const { title = null, demoUrl = undefined, codeUrl = undefined, imageUrl = undefined, body = null } = project;
 
     return (
         <div>
@@ -96,10 +96,12 @@ const Project: FC<iProject> = ({ project }) => {
                                 <Link href="/">
                                     <a className={`${ANCHOR_STYLE}`} ><FaArrowLeft size={16} className="text-gray-400 inline-block mr-1" /> Go back</a>
                                 </Link>
-                                <div className="w-full border-b-2 border-gray-50 dark:border-gray-800 my-2" />
 
-                                <a href={demoUrl} target="_blank" rel="noreferrer" className={`${ANCHOR_STYLE}`} ><FaArrowRight size={16} className="text-gray-400 inline-block mr-1" /> View demo</a>
-                                <a href={codeUrl} target="_blank" rel="noreferrer" className={`${ANCHOR_STYLE}`} ><FaCode size={16} className="text-gray-400 inline-block mr-1" /> View code</a>
+                                {(demoUrl || codeUrl) && <div className="w-full border-b-2 border-gray-50 dark:border-gray-800 my-2" />}
+
+
+                                {demoUrl && <a href={demoUrl} target="_blank" rel="noreferrer" className={`${ANCHOR_STYLE}`} ><FaArrowRight size={16} className="text-gray-400 inline-block mr-1" /> View demo</a>}
+                                {codeUrl && <a href={codeUrl} target="_blank" rel="noreferrer" className={`${ANCHOR_STYLE}`} ><FaCode size={16} className="text-gray-400 inline-block mr-1" /> View code</a>}
 
                             </StickyContainer>
                         </div>

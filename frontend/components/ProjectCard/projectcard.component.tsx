@@ -38,8 +38,8 @@ const ProjectCard = ({ title, publishedAt, codeUrl, demoUrl, author, imageUrl, s
             </div>
             <div className="flex">
                 <Link href={`projects/${slug.current}`}><a className={`${ANCHOR_STYLE}`}><FaArrowRight className="mr-2 text-gray-500" size="12px" /> Read more</a></Link>
-                <a href={demoUrl} rel="noreferrer" target="_blank" className={`${ANCHOR_STYLE}`}><FaEye className="mr-2 text-gray-500" size="12px" /> View demo</a>
-                <a href={codeUrl} rel="noreferrer" target="_blank" className={`${ANCHOR_STYLE}`}><FaCode className="mr-2 text-gray-500" size="12px" /> View code</a>
+                {demoUrl && <a href={demoUrl} rel="noreferrer" target="_blank" className={`${ANCHOR_STYLE}`}><FaEye className="mr-2 text-gray-500" size="12px" /> View demo</a>}
+                {codeUrl && <a href={codeUrl} rel="noreferrer" target="_blank" className={`${ANCHOR_STYLE}`}><FaCode className="mr-2 text-gray-500" size="12px" /> View code</a>}
             </div>
         </div >
     )
