@@ -18,19 +18,15 @@ const ProjectCard = ({ title, publishedAt, codeUrl, demoUrl, author, imageUrl, s
     return (
         <div className="max-w-[600px]">
             <Link href={`projects/${slug.current}`}>
-                <a>
-
-                    <div className="absolute z-10 text-white w-[600px] h-[300px] flex items-center justify-center opacity-0 hover:opacity-100 transition-all">
-
-                        <div className="z-20 flex flex-col items-center">
-                            <FaArrowCircleRight className="text-gray-200" size={48} />
-                            <span className="text-gray-200">Read more</span>
-
+                <a className="transition-all group">
+                    <div className="relative flex justify-center items-center">
+                        <Image src={imageUrl} alt={"alt"} width={width} height={height} />
+                        <div className="z-10 absolute group-hover:visible invisible flex flex-col justify-center  items-center">
+                            <FaArrowCircleRight size={36} />
+                            Read more
                         </div>
-                        <div className="z-10 absolute w-[600px] h-[300px] bg-black opacity-50" />
+                        <div className="absolute bg-black w-full h-full group-hover:visible invisible hover:opacity-40" />
                     </div>
-
-                    <Image src={imageUrl} alt={"alt"} width={width} height={height} />
                 </a>
             </Link>
 

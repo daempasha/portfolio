@@ -29,10 +29,8 @@ const Home: FC<iHome> = ({ projects }: iHome) => {
             PROJECTS
           </div>
           <div className='grid gap-10 m-2 justify-center md:justify-start md:grid-cols-2 my-5'>
-            {projects.map((project) => {
-              console.log(project)
-              return <ProjectCard key={project.slug.current} {...project} />
-            })}
+            {projects.map((project) => (<ProjectCard key={project.slug.current} {...project} />
+            ))}
 
 
           </div>
