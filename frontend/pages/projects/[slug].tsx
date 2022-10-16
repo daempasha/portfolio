@@ -107,7 +107,7 @@ const Project: FC<iProject> = ({ project }) => {
                             <div className="text-center text-2xl">{title}</div>
                             <div className="text-center text-gray-500 dark:text-gray-300">{dayjs(project.publishedAt).format(DATE_FORMAT)}</div>
                             <div className="mx-5 md:mx-0 my-5 text-center">
-                                <Image className="rounded-md " src={imageUrl ? imageUrl : `https://picsum.photos/885/461`} alt={"alt"} width={885} height={461} />
+                                <Image className="rounded-md " src={imageUrl ? imageUrl : `https://picsum.photos/885/461`} alt={`${title} Main Image`} width={885} height={461} />
                             </div>
                             <div className="mx-10 md:mx-0">
 
