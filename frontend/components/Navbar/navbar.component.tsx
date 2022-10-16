@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ThemeSwitcher from "../ThemeSwitcher/themeswitcher.component";
 
 const Navbar = () => {
@@ -6,9 +7,14 @@ const Navbar = () => {
             <div
                 className="mx-1 xl:mx-0  flex justify-between">
 
-                <span className="bg-black text-white h-8 w-8 rounded-full flex items-center justify-center font-bold">
-                    D
-                </span>
+                <Link href="/">
+                    <a className="group">
+
+                        <span className="group-hover:animate-pulse bg-black text-white h-8 w-8 rounded-full flex items-center justify-center font-bold">
+                            D
+                        </span>
+                    </a>
+                </Link>
                 <ThemeSwitcher />
             </div>
 

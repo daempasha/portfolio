@@ -6,11 +6,11 @@ const Footer = () => {
 
         <footer className="w-full bg-black py-10">
             <div className="flex justify-center">
-                <a className={`${SOCIAL_LINK_STYLE}`}>
+                <a href="https://www.linkedin.com/in/daempasha/" target="_blank" rel="noreferrer" className={`${SOCIAL_LINK_STYLE}`}>
                     <FaLinkedin size="24px" />
                 </a>
                 <span className="mx-2" />
-                <a className={`${SOCIAL_LINK_STYLE}`}>
+                <a href="https://github.com/daempasha" target="_blank" rel="noreferrer" className={`${SOCIAL_LINK_STYLE}`}>
                     <FaGithub size="24px" />
                 </a>
             </div>
