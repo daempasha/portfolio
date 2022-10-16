@@ -35,7 +35,7 @@ const ptComponents: iPtComponents = {
     },
     listItem: {
         // Ex. 1: customizing common list types
-        bullet: ({ children }: iPtComponent) => <li>- {children}</li>,
+        bullet: ({ children }: iPtComponent) => <li className="ml-5 text-gray-600 dark:text-gray-300">- {children}</li>,
 
         // Ex. 2: rendering custom list items
         checkmarks: ({ children }: iPtComponent) => <li>✅ {children}</li>,
