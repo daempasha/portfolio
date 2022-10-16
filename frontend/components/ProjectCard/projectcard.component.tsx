@@ -4,6 +4,7 @@ import { FaArrowCircleRight, FaArrowRight, FaCode, FaEye } from "react-icons/fa"
 import { iProjectApi } from "@collections/types";
 import Link from "next/link";
 import { DATE_FORMAT } from "@collections/constants";
+import { urlFor } from "@collections/helpers";
 
 
 type iProjectCard = iProjectApi & {
@@ -13,14 +14,14 @@ type iProjectCard = iProjectApi & {
 
 export const ANCHOR_STYLE = "my-1 mx-3 flex items-center text-xs md:text-sm hover:bg-gray-200 dark:hover:bg-gray-700 px-2 py-1 rounded-sm cursor-pointer transition-all";
 
-const ProjectCard = ({ title, publishedAt, codeUrl, demoUrl, author, imageUrl, slug, width = 600, height = 300 }: iProjectCard) => {
+const ProjectCard = ({ title, publishedAt, codeUrl, demoUrl, author, mainImage, slug, width = 600, height = 300 }: iProjectCard) => {
 
     return (
         <div className="max-w-[600px]">
             <Link href={`projects/${slug.current}`}>
                 <a className="transition-all group">
                     <div className="relative flex justify-center items-center ">
-                        <Image className="rounded-md" src={imageUrl ? imageUrl : `https://picsum.photos/${width}/${height}`} alt={`${title} Main Image`} width={width} height={height} />
+                        <Image className="rounded-md" src={mainImage && urlFor(mainImage).url()} placeholder="blur" blurDataURL={mainImage && urlFor(mainImage).blur(20).url()} alt={`${title} Main Image`} width={width} height={height} />
                         <div className="z-10 text-white absolute group-hover:visible invisible flex flex-col justify-center items-center">
                             <FaArrowCircleRight size={36} />
                             Read more

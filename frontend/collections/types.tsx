@@ -14,7 +14,7 @@ export interface iProjectApi {
     body: any,
     codeUrl: string;
     demoUrl: string;
-    imageUrl: string;
+    mainImage: any;
     publishedAt: string;
 }
 

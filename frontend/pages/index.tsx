@@ -44,10 +44,10 @@ const Home: FC<iHome> = ({ projects }: iHome) => {
 export async function getStaticProps() {
   const projects = await client.fetch(`
     *[_type == "project" && publishedAt < now()]{
-      title,
-      author->,
-      slug,
-     "imageUrl": mainImage.asset->url,
+     title,
+     author->,
+     slug,
+     mainImage,
      codeUrl,
      demoUrl,
      publishedAt
