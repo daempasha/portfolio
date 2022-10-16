@@ -21,7 +21,7 @@ const ProjectCard = ({ title, publishedAt, codeUrl, demoUrl, author, imageUrl, s
                 <a className="transition-all group">
                     <div className="relative flex justify-center items-center ">
                         <Image src={imageUrl ? imageUrl : `https://picsum.photos/${width}/${height}`} alt={"alt"} width={width} height={height} />
-                        <div className="z-10 absolute group-hover:visible invisible flex flex-col justify-center items-center">
+                        <div className="z-10 text-white absolute group-hover:visible invisible flex flex-col justify-center items-center">
                             <FaArrowCircleRight size={36} />
                             Read more
                         </div>
