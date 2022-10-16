@@ -11,7 +11,7 @@ type iProjectCard = iProjectApi & {
     width?: number;
 }
 
-export const ANCHOR_STYLE = "my-1 mx-3 flex items-center text-sm hover:bg-gray-200 dark:hover:bg-gray-700 px-2 py-1 rounded-sm cursor-pointer transition-all";
+export const ANCHOR_STYLE = "my-1 mx-3 flex items-center text-xs md:text-sm hover:bg-gray-200 dark:hover:bg-gray-700 px-2 py-1 rounded-sm cursor-pointer transition-all";
 
 const ProjectCard = ({ title, publishedAt, codeUrl, demoUrl, author, imageUrl, slug, width = 600, height = 300 }: iProjectCard) => {
 

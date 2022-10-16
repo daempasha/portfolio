@@ -89,7 +89,7 @@ const Project: FC<iProject> = ({ project }) => {
             <div className="flex flex-col bg-gray-100 dark:bg-gray-800 dark:text-gray-200 min-h-screen ">
                 <Navbar />
                 <main className="py-10 max-w-7xl w-full mx-auto flex-1">
-                    <div className="flex text-justify gap-10">
+                    <div className="flex flex-col md:flex-row text-justify gap-10">
                         <div>
                             <StickyContainer>
 
