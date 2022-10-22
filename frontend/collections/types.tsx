@@ -25,3 +25,7 @@ export interface iPtComponents {
 export interface iPtComponent {
     children: ReactNode | ReactNode[]
 }
+
+export interface iTag {
+    value: string;
+}

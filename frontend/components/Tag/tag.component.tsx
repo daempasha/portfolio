@@ -1,12 +1,4 @@
-interface iTag {
-    value: string;
-}
-
-interface iGenerateRandomColour {
-    text: string;
-    bg: string;
-}
-
+import { iTag } from "@collections/types";
 
 
 const Tag = ({ value }: iTag) => {
