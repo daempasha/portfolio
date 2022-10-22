@@ -1,6 +1,3 @@
-import { COLOURS, TAG_LOOKUP } from "@collections/constants";
-import { useState } from "react";
-
 interface iTag {
     value: string;
 }
