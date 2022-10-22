@@ -14,6 +14,7 @@ import client from "../../client";
 import { GetStaticPropsContext } from "next";
 import { ReactNode, FC } from "react";
 import { DATE_FORMAT } from "@collections/constants";
+import TagsRenderer from "@components/TagsRenderer/tagsrenderer.component";
 
 function urlFor(source: any) {
     return imageUrlBuilder(client).image(source)
@@ -75,7 +76,7 @@ interface iProject {
 
 const Project: FC<iProject> = ({ project }) => {
 
-    const { title = null, demoUrl = undefined, codeUrl = undefined, mainImage = undefined, body = null } = project;
+    const { title = null, tags = [], demoUrl = undefined, codeUrl = undefined, mainImage = undefined, body = null } = project;
 
     return (
         <div>
@@ -108,6 +109,9 @@ const Project: FC<iProject> = ({ project }) => {
                         <div className="flex-1">
                             <div className="text-center text-2xl">{title}</div>
                             <div className="text-center text-gray-500 dark:text-gray-300">{dayjs(project.publishedAt).format(DATE_FORMAT)}</div>
+                            <div className="text-center my-1">
+                                <TagsRenderer tags={tags} />
+                            </div>
                             <div className="mx-5 md:mx-0 my-5 text-center">
                                 <Image className="rounded-md" objectFit="cover" src={mainImage && urlFor(mainImage).url()} placeholder="blur" blurDataURL={mainImage && urlFor(mainImage).blur(20).url()} alt={`${title} Main Image`} width={885} height={461} />
                             </div>
@@ -145,6 +149,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       *[_type == "project" && slug.current == $slug]{
         title,
         publishedAt,
+        tags,
         mainImage,
         demoUrl,
         codeUrl,

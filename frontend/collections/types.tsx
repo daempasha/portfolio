@@ -12,6 +12,7 @@ export interface iProjectApi {
         current: string;
     },
     body: any,
+    tags: string[],
     codeUrl: string;
     demoUrl: string;
     mainImage: any;

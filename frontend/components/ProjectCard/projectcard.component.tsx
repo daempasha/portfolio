@@ -5,6 +5,7 @@ import { iProjectApi } from "@collections/types";
 import Link from "next/link";
 import { DATE_FORMAT } from "@collections/constants";
 import { urlFor } from "@collections/helpers";
+import TagsRenderer from "@components/TagsRenderer/tagsrenderer.component";
 
 
 type iProjectCard = iProjectApi & {
@@ -14,7 +15,7 @@ type iProjectCard = iProjectApi & {
 
 export const ANCHOR_STYLE = "my-1 mx-3 flex items-center text-xs md:text-sm hover:bg-gray-200 dark:hover:bg-gray-700 px-2 py-1 rounded-sm cursor-pointer transition-all";
 
-const ProjectCard = ({ title, publishedAt, codeUrl, demoUrl, author, mainImage, slug, width = 600, height = 300 }: iProjectCard) => {
+const ProjectCard = ({ title, publishedAt, codeUrl, demoUrl, author, tags, mainImage, slug, width = 600, height = 300 }: iProjectCard) => {
 
     return (
         <div className="max-w-[600px]">
@@ -32,10 +33,17 @@ const ProjectCard = ({ title, publishedAt, codeUrl, demoUrl, author, mainImage, 
             </Link>
 
             <div className="flex mt-1 justify-between items-center">
-                <h1 className="text-lg">{title}</h1>
-                <span className="text-sm text-gray-500">
-                    {dayjs(publishedAt, "x").format(DATE_FORMAT)}
+                <span>
+                    <h1 className="text-lg inline">{title}</h1>
+                    <div className="inline-block bg-gray-500 w-1 h-1 rounded-full ml-2 align-middle" />
+                    <span className="text-sm text-gray-500 ml-1">
+                        {dayjs(publishedAt, "x").format(DATE_FORMAT)}
+                    </span>
                 </span>
+                <span>
+                    <TagsRenderer tags={tags} />
+                </span>
+
             </div>
             <div className="flex">
                 <Link href={`projects/${slug.current}`}><a className={`${ANCHOR_STYLE}`}><FaArrowRight className="mr-2 text-gray-500" size="12px" /> Read more</a></Link>

@@ -47,6 +47,7 @@ export async function getStaticProps() {
      title,
      author->,
      slug,
+     tags,
      mainImage,
      codeUrl,
      demoUrl,

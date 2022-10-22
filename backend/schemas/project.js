@@ -18,6 +18,12 @@ export default {
       },
     },
     {
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{ type: "string" }]
+    },
+    {
       name: "demoUrl",
       title: "Demo URL",
       type: "url"
